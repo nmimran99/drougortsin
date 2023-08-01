@@ -88,7 +88,7 @@ export default function Index() {
                 src="/images/DAD1.webp" 
                 alt="dr.ougortsin" 
                 width="200" height="200" 
-                className="w-[120px] h-[120px] rounded-full object-cover border border-transparent border-2 outline outline-blue-800 outline-2" 
+                className="w-[120px] h-[120px] rounded-full object-cover shadow-xl" 
                 />
                 <div className="my-auto w-[230px] pr-4">
                     <div className="text-xl font-semibold ">
