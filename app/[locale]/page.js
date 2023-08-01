@@ -14,14 +14,14 @@ export default function Index() {
   }
 
   return <div className="h-screen w-screen mt-16" >
-    <div className="flex flex-col items-center justify-center">
+    <div className="flex flex-col items-center justify-center w-full xl:w-3/5 xl:mx-auto 2xl:w-2/5">
         <Image 
         src="/images/vlad_surgery1.jpg" 
         alt="dr.ougortsin" 
         width="200" height="200" 
-        className="w-full h-52" 
+        className="w-full xl:rounded-b-xl" 
         />
-        <div className="text-gray-800 text-center my-6 flex flex-col items-center">
+        <div className="text-gray-800 text-center my-6 flex flex-col items-center p-2">
             <div className="font-semibold text-3xl">
                 {t("name")}
             </div>
@@ -33,11 +33,11 @@ export default function Index() {
             </div>
         </div>
         <div className="mx-auto w-24 border-b border-black my-8"></div>
-        <div>
+        <div className="py-6">
             <div className="font-semibold text-2xl text-center pb-6">
                 {t("specializations.title")}
             </div>
-            <div className="grid gap-4 grid-cols-3">
+            <div className="grid gap-4 grid-cols-2">
                 <div className="h-32 w-32 border-2 border-blue-800 text-center flex flex-col items-center justify-around p-2 rounded-xl shadow-xl font-medium">
                     <Image 
                         src="/icons/LineSegments.svg" 
@@ -88,16 +88,16 @@ export default function Index() {
                 </div>
             </div>
         </div>
-        <div className="mx-auto w-24 border-b border-black my-8"></div>
-        <div className="py-8 px-8 flex flex-col items-center">
-            <div className="flex border-2 border-blue-800 rounded-xl p-4">
+        <div className="mx-auto w-24 border-b border-black my-12"></div>
+        <div className="py-8 flex flex-col items-center">
+            <div className="flex border-2 border-blue-800 rounded-xl p-4 items-center w-96">
                 <Image 
                 src="/images/DAD1.webp" 
                 alt="dr.ougortsin" 
                 width="200" height="200" 
-                className="w-[160px] h-[120px] rounded-full object-cover border border-transparent border-2 outline outline-blue-800 outline-2" 
+                className="w-[120px] h-[120px] rounded-full object-cover border border-transparent border-2 outline outline-blue-800 outline-2" 
                 />
-                <div className="pr-4 my-auto">
+                <div className="my-auto w-60 pr-4">
                     <div className="text-xl font-semibold ">
                         {t("name")}
                     </div>
@@ -106,7 +106,7 @@ export default function Index() {
                     </div>
                 </div>
             </div>
-            <div className="py-4">
+            <div className="py-4 w-11/12 xl:w-3/4">
                 <div>
                     {t("shortAbout.first")}
                 </div>
