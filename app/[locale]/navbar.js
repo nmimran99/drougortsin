@@ -13,7 +13,6 @@ import {
     navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
 import Link from 'next/link';
-import { Sheet } from '@/components/ui/sheet';
 import Image from 'next/image';
 
 export default function Navbar({ locale }) {

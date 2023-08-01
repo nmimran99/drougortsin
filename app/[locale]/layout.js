@@ -18,10 +18,13 @@ export default async function LocaleLayout({children, params: {locale}}) {
   }
  
   return (
-    <html lang={locale} dir={locale === "he" ? "rtl" : "ltr"} className={cx(locale === "he" ? "font-Assistant" : "")}
-    style={{
-      fontSize: "100%"
-    }}
+    <html 
+      lang={locale} 
+      dir={locale === "he" ? "rtl" : "ltr"} 
+      className={cx(locale === "he" ? "font-Assistant" : "", "overflow-y-auto overflow-x-hidden w-screen")}
+      style={{
+        fontSize: "100%"
+      }}
     >
       <body>
         <NextIntlClientProvider locale={locale} messages={messages}>

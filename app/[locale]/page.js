@@ -7,13 +7,7 @@ import Image from 'next/image';
 export default function Index() {
   const t = useTranslations('Index');
 
-  const increase = () => {
-    let fontSize = Math.round(Number(document.querySelector('#this').style.fontSize.replace("px", "")) * 1.1);
-    console.log(fontSize)
-    document.querySelector('#this').style.fontSize = `${fontSize}px`;
-  }
-
-  return <div className="h-screen w-screen mt-16" >
+  return <div className="h-screen w-full mt-16" >
     <div className="flex flex-col items-center justify-center w-full xl:w-3/5 xl:mx-auto 2xl:w-2/5">
         <Image 
         src="/images/vlad_surgery1.jpg" 
@@ -90,14 +84,14 @@ export default function Index() {
         </div>
         <div className="mx-auto w-24 border-b border-black my-12"></div>
         <div className="py-8 flex flex-col items-center">
-            <div className="flex border-2 border-blue-800 rounded-xl p-4 items-center w-96">
+            <div className="flex border-2 border-blue-800 rounded-xl p-4 items-center w-[370px]">
                 <Image 
                 src="/images/DAD1.webp" 
                 alt="dr.ougortsin" 
                 width="200" height="200" 
                 className="w-[120px] h-[120px] rounded-full object-cover border border-transparent border-2 outline outline-blue-800 outline-2" 
                 />
-                <div className="my-auto w-60 pr-4">
+                <div className="my-auto w-[230px] pr-4">
                     <div className="text-xl font-semibold ">
                         {t("name")}
                     </div>
