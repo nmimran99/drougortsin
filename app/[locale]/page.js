@@ -1,6 +1,5 @@
 'use client'
 
-import { cx } from 'class-variance-authority';
 import {useTranslations} from 'next-intl';
 import Image from 'next/image';
  
