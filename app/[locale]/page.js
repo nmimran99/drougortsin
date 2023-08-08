@@ -1,12 +1,17 @@
 'use client'
 
+import DescriptionCard from '@/components/DescriptionCard';
+import Media from '@/components/Media';
+import MediaAppearance from '@/components/MediaAppearance';
+import Specializations from '@/components/Specializations';
 import {useTranslations} from 'next-intl';
 import Image from 'next/image';
- 
+
+  
 export default function Index() {
   const t = useTranslations('Index');
 
-  return <div className="h-screen w-full mt-16" >
+  return <div className="w-full mt-16" >
     <div className="flex flex-col items-center justify-center w-full xl:w-3/5 xl:mx-auto 2xl:w-2/5">
         <Image 
         src="/images/vlad_surgery1.jpg" 
@@ -26,88 +31,11 @@ export default function Index() {
             </div>
         </div>
         <div className="mx-auto w-24 border-b border-black my-8"></div>
-        <div className="py-6">
-            <div className="font-semibold text-2xl text-center pb-6">
-                {t("specializations.title")}
-            </div>
-            <div className="grid gap-4 grid-cols-2">
-                <div className="h-32 w-32 border-2 border-blue-800 text-center flex flex-col items-center justify-around p-2 rounded-xl shadow-xl font-medium">
-                    <Image 
-                        src="/icons/LineSegments.svg" 
-                        alt="Long Bone Breaks" 
-                        width="40" height="40" 
-                    />
-                    {t("specializations.longBones")}
-                </div>
-                <div className="h-32 w-32 border-2 border-blue-800 text-center flex flex-col items-center justify-around p-2 rounded-xl shadow-xl font-medium">
-                    <Image 
-                        src="/icons/AlignCenterHorizontal.svg" 
-                        alt="Long Bone Breaks" 
-                        width="40" height="40" 
-                    />
-                    {t("specializations.femurNeck")}
-                </div>
-                <div className="h-32 w-32 border-2 border-blue-800 text-center flex flex-col items-center justify-around p-2 rounded-xl shadow-xl font-medium">
-                    <Image 
-                        src="/icons/ArrowClockwise.svg" 
-                        alt="Long Bone Breaks" 
-                        width="40" height="40" 
-                    />
-                    {t("specializations.aroundFemur")}
-                </div>
-                <div className="h-32 w-32 border-2 border-blue-800 text-center flex flex-col items-center justify-around p-2 rounded-xl shadow-xl font-medium">
-                    <Image 
-                        src="/icons/EscalatorUp.svg" 
-                        alt="Long Bone Breaks" 
-                        width="40" height="40" 
-                    />
-                    {t("specializations.aroundKnee")}
-                </div>
-                <div className="h-32 w-32 border-2 border-blue-800 text-center flex flex-col items-center justify-around p-2 rounded-xl shadow-xl font-medium">
-                    <Image 
-                        src="/icons/ArrowsInCardinal.svg" 
-                        alt="Long Bone Breaks" 
-                        width="40" height="40" 
-                    />
-                    {t("specializations.pika")}
-                </div>
-                <div className="h-32 w-32 border-2 border-blue-800 text-center flex flex-col items-center justify-around p-2 rounded-xl shadow-xl font-medium">
-                    <Image 
-                        src="/icons/SneakerMove.svg" 
-                        alt="Long Bone Breaks" 
-                        width="40" height="40" 
-                    />
-                    {t("specializations.ankleFoot")}
-                </div>
-            </div>
-        </div>
+        <Specializations />
         <div className="mx-auto w-24 border-b border-black my-12"></div>
-        <div className="py-8 flex flex-col items-center">
-            <div className="flex border-2 border-blue-800 rounded-xl p-4 items-center w-[370px]">
-                <Image 
-                src="/images/DAD1.webp" 
-                alt="dr.ougortsin" 
-                width="200" height="200" 
-                className="w-[120px] h-[120px] rounded-full object-cover shadow-xl" 
-                />
-                <div className="my-auto w-[230px] pr-4">
-                    <div className="text-xl font-semibold ">
-                        {t("name")}
-                    </div>
-                    <div className="">
-                        {t("nameDesc")}
-                    </div>
-                </div>
-            </div>
-            <div className="py-4 w-11/12 xl:w-3/4">
-                <div>
-                    {t("shortAbout.first")}
-                </div>
-                <div className="py-2">
-                    {t("shortAbout.second")}
-                </div>
-            </div>
-        </div>
+        <DescriptionCard />
+        <div className="mx-auto w-24 border-b border-black my-12"></div>
+        <MediaAppearance />
     </div>
   </div>;
 }

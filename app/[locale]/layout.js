@@ -3,7 +3,8 @@ import {notFound} from 'next/navigation';
 import '../globals.css'
 import { cx } from 'class-variance-authority';
 import Accessibilty from './accessibility';
-import Navbar from './navbar';
+import Navbar from '../../components/navbar';
+import Footer from '@/components/Footer';
  
 export function generateStaticParams() {
   return [{locale: 'he'}, {locale: 'en'}, {locale: 'ru'}];
@@ -31,6 +32,7 @@ export default async function LocaleLayout({children, params: {locale}}) {
           <Accessibilty />
           <Navbar locale={locale}/>
           {children}
+          <Footer />
         </NextIntlClientProvider>
       </body>
     </html>
