@@ -3,8 +3,9 @@ import {notFound} from 'next/navigation';
 import '../globals.css'
 import { cx } from 'class-variance-authority';
 import Accessibilty from './accessibility';
-import Navbar from '../../components/navbar';
+import Navbar from '../../components/navbar/navbar';
 import Footer from '@/components/Footer';
+import Whatsapp from '@/components/Whatsapp';
  
 export function generateStaticParams() {
   return [{locale: 'he'}, {locale: 'en'}, {locale: 'ru'}];
@@ -30,6 +31,7 @@ export default async function LocaleLayout({children, params: {locale}}) {
       <body>
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Accessibilty />
+          <Whatsapp />
           <Navbar locale={locale}/>
           {children}
           <Footer />

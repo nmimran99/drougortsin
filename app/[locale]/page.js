@@ -12,11 +12,11 @@ export default function Index() {
   const t = useTranslations('Index');
 
   return <div className="w-full mt-16" >
-    <div className="flex flex-col items-center justify-center w-full xl:w-3/5 xl:mx-auto 2xl:w-2/5">
+    <div className="flex flex-col items-center justify-center w-full xl:w-3/5 xl:mx-auto">
         <Image 
         src="/images/vlad_surgery1.jpg" 
         alt="dr.ougortsin" 
-        width="200" height="200" 
+        width="1200" height="1200" 
         className="w-full xl:rounded-b-xl" 
         />
         <div className="text-gray-800 text-center my-6 flex flex-col items-center p-2">

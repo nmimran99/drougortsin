@@ -38,7 +38,9 @@ export default function DescriptionCard() {
                     mediaLinks.map((m,i) => 
                         <Link href={m.link} passHref key={i} legacyBehavior>
                             <a target="_blank" rel="noopener noreferrer">
-                                <div className="bg-blue-800 rounded-full px-4 py-1.5 text-white font-semibold flex items-center m-1 w-max">
+                                <div className="bg-blue-800 rounded-full px-4 py-1.5 text-white font-semibold flex items-center my-1 w-max shadow-xl border border-gray-200
+                                    md:ml-2
+                                ">
                                     <Image 
                                         src="/icons/NewWindow.svg"
                                         height="16"

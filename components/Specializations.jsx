@@ -49,7 +49,7 @@ export default function Specializations() {
                         <Link href={s.path}>
                             <li
                                 key={i}
-                                className="h-32 w-32 border-2 border-blue-800 text-center flex flex-col items-center justify-top p-2 rounded-xl shadow-xl font-medium
+                                className="h-40 w-40 border-2 border-blue-800 text-center flex flex-col items-center justify-top p-2 rounded-xl shadow-xl font-medium text-gray-800
                                 md:h-48 md:w-48 md:justify-center
                             "
                             >
