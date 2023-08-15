@@ -6,6 +6,7 @@ import Accessibilty from './accessibility';
 import Navbar from '../../components/navbar/navbar';
 import Footer from '@/components/Footer';
 import Whatsapp from '@/components/Whatsapp';
+import Head from 'next/head';
  
 export function generateStaticParams() {
   return [{locale: 'he'}, {locale: 'en'}, {locale: 'ru'}];
@@ -28,6 +29,9 @@ export default async function LocaleLayout({children, params: {locale}}) {
         fontSize: "100%"
       }}
     >
+      <head>
+          <title>Dr. Ougortsin</title>
+      </head>
       <body className="bg-secondary">
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Accessibilty />
