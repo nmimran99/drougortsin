@@ -28,7 +28,7 @@ export default async function LocaleLayout({children, params: {locale}}) {
         fontSize: "100%"
       }}
     >
-      <body>
+      <body className="bg-secondary">
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Accessibilty />
           <Whatsapp />

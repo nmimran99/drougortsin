@@ -54,7 +54,7 @@ export default function SideMenu({ links }) {
                                 <div className="text-white">
                                     {tIndex("nameDesc")}
                                 </div>
-                            </div> 
+                            </div>
                         </div>
                         <div className="border-b border-white my-5" />
                         <div>
@@ -63,24 +63,27 @@ export default function SideMenu({ links }) {
                                     links.map((l, i) => {
                                         if (l.subunits) {
                                             return (
-                                                <Accordion collapsible className="w-full ">
-                                                    <AccordionItem value="item-1" className="border-none">
-                                                        <AccordionTrigger className="text-gray-200 text-xl py-2 font-normal justify-start underline-offset-8">{tNavbar(l.name)}</AccordionTrigger>
-                                                        <AccordionContent>
-                                                            <ul className="flex flex-col items-start">
-                                                                { l.subunits.map((sb,i) => {
-                                                                    return (
-                                                                        <li className="text-gray-200 text-lg pr-4 py-1 font-normal" key={i}>
-                                                                            <Link href={sb.href}>
-                                                                                {tNavbar(sb.name)}
-                                                                            </Link>
-                                                                        </li>
-                                                                    )
-                                                                })}
-                                                            </ul>  
-                                                        </AccordionContent>
-                                                    </AccordionItem>
-                                                </Accordion>
+                                                <li key={i}>
+                                                    <Accordion collapsible className="w-full ">
+                                                        <AccordionItem value="item-1" className="border-none">
+                                                            <AccordionTrigger className="text-gray-200 text-xl py-2 font-normal justify-start underline-offset-8">{tNavbar(l.name)}</AccordionTrigger>
+                                                            <AccordionContent>
+                                                                <ul className="flex flex-col items-start">
+                                                                    {l.subunits.map((sb, i) => {
+                                                                        return (
+                                                                            <li className="text-gray-200 text-lg pr-4 py-1 font-normal" key={i}>
+                                                                                <Link href={sb.href}>
+                                                                                    {tNavbar(sb.name)}
+                                                                                </Link>
+                                                                            </li>
+                                                                        )
+                                                                    })}
+                                                                </ul>
+                                                            </AccordionContent>
+                                                        </AccordionItem>
+                                                    </Accordion>
+                                                </li>
+
                                             )
                                         }
                                         return (

@@ -46,10 +46,10 @@ export default function Specializations() {
             <ul className="grid gap-4 grid-cols-2 lg:grid-cols-3">
                 {
                     specs.map((s, i) =>
-                        <Link href={s.path}>
+                        <Link href={s.path} key={i}>
                             <li
                                 key={i}
-                                className="h-40 w-40 border-2 border-blue-800 text-center flex flex-col items-center justify-top p-2 rounded-xl shadow-xl font-medium text-gray-800
+                                className="h-40 w-40 border border-gray-200 text-center flex flex-col items-center justify-top p-2 rounded-xl shadow-xl font-medium text-secondary bg-[#fdfdfd]
                                 md:h-48 md:w-48 md:justify-center
                             "
                             >

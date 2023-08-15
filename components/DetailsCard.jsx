@@ -7,7 +7,7 @@ export default function DetailsCard({ className}) {
     const t = useTranslations('Index');
 
     return (
-            <div className={cx(`flex border-2 border-blue-800 rounded-xl p-4 items-center w-max max-w-[380px]
+            <div className={cx(`flex border-2 border-primary rounded-xl p-4 items-center w-max max-w-[380px]
             `,
             className
             )}>

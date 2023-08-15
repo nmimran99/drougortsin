@@ -75,11 +75,11 @@ export default function Navbar({ locale }) {
     }]
 
     return (<>
-        <div className={`w-screen fixed top-0 z-50 bg-blue-800 backdrop-blur-xl text-white font-Assistant flex items-center 
+        <div className={`w-screen fixed top-0 z-50 bg-gray-800 backdrop-blur-xl text-white font-Assistant flex items-center 
             ${
 				!scrollIsZero ?
 				"trasnsition-all duration-300 shadow-lg bg-black/50 border-bottom border-gray-500":
-                "trasnsition-all duration-300 bg-blue-800"
+                "trasnsition-all duration-300 bg-gray-800"
 			}
         md:justify-center h-16 shadow-xl`}>
             <div className="w-full h-full flex justify-between items-center md:hidden">

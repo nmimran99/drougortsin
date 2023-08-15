@@ -18,8 +18,9 @@ export default function DescriptionCard() {
     const t = useTranslations('Index');
 
     return (
-        <div className="py-8 flex flex-col items-center
+        <div className="py-8 flex flex-col items-center bg-accent shadow-xl
             md:border md:border-gray-200 md:rounded-xl md:w-3/4
+            2xl:w-3/5
         ">
             <DetailsCard />
             <div className="py-4 w-11/12 xl:w-3/4">
@@ -31,14 +32,13 @@ export default function DescriptionCard() {
                 </div>
             </div>
             <div className="flex flex-col items-center 
-                md:flex-row md:justify-start md:w-11/12
-                xl:w-3/4
+                md:flex-row md:justify-start md:w-11/12 md:flex-wrap
             ">
                 {
                     mediaLinks.map((m,i) => 
                         <Link href={m.link} passHref key={i} legacyBehavior>
                             <a target="_blank" rel="noopener noreferrer">
-                                <div className="bg-blue-800 rounded-full px-4 py-1.5 text-white font-semibold flex items-center my-1 w-max shadow-xl border border-gray-200
+                                <div className="bg-primary rounded-full px-4 py-1.5 text-white font-semibold flex items-center my-1 w-max shadow-xl border border-gray-200
                                     md:ml-2
                                 ">
                                     <Image 
