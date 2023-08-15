@@ -5,7 +5,8 @@ export default createMiddleware({
   locales: ['he', 'en', 'ru'],
  
   // If this locale is matched, pathnames work without a prefix (e.g. `/about`)
-  defaultLocale: 'he'
+  defaultLocale: 'he',
+  localeDetection: false
 });
  
 export const config = {
