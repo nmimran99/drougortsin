@@ -1,18 +1,6 @@
 'use client'
 
 import { useTranslations } from 'next-intl';
-import {
-    NavigationMenu,
-    NavigationMenuContent,
-    NavigationMenuIndicator,
-    NavigationMenuItem,
-    NavigationMenuLink,
-    NavigationMenuList,
-    NavigationMenuTrigger,
-    NavigationMenuViewport,
-    navigationMenuTriggerStyle,
-} from "@/components/ui/navigation-menu"
-import Link from 'next/link';
 import Image from 'next/image';
 import { useCallback, useEffect, useState } from 'react';
 import SideMenu from '@/components/navbar/SideMenu';
@@ -75,13 +63,13 @@ export default function Navbar({ locale }) {
     }]
 
     return (<>
-        <div className={`w-screen fixed top-0 z-50 bg-gray-800 backdrop-blur-xl text-white font-Assistant flex items-center 
+        <div className={`w-screen fixed top-0 z-50 bg-gray-800 text-white font-Assistant flex items-center 
             ${
 				!scrollIsZero ?
-				"trasnsition-all duration-300 shadow-lg bg-black/50 border-bottom border-gray-500":
-                "trasnsition-all duration-300 bg-gray-800"
+				"trasnsition-all duration-300 shadow-xl":
+                "trasnsition-all duration-300"
 			}
-        md:justify-center h-16 shadow-xl`}>
+        md:justify-center h-16`}>
             <div className="w-full h-full flex justify-between items-center md:hidden">
                 <div>
                     <SideMenu links={links} />
