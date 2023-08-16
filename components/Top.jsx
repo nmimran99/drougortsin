@@ -6,7 +6,7 @@ export default function Top() {
     const t = useTranslations('Index');
 
     return (
-        <div className="text-white text-center flex flex-col items-center justify-center p-2 bg-primary w-screen h-screen lg:mt-10
+        <div className="text-white text-center flex flex-col items-center justify-center p-2 bg-primary w-screen h-screen lg:py-10
         ">
             <div
             className="flex items-end justify-center w-full"
