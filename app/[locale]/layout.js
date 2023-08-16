@@ -30,6 +30,7 @@ export default async function LocaleLayout({children, params: {locale}}) {
       }}
     >
       <head>
+        <link rel="icon" href="/images/LogoOnly.jpg" />
           <title>Dr. Ougortsin</title>
       </head>
       <body className="bg-secondary">
