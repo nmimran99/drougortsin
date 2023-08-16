@@ -42,19 +42,11 @@ export default function SideMenu({ links }) {
                     <SheetDescription className="py-12">
                         <div className="flex justify-start items-center w-full">
                             <Image
-                                src="/images/DAD1.webp"
+                                src="/images/LogoWhite.png"
                                 alt="dr.ougortsin"
-                                width="150" height="150"
-                                className="w-24 h-20  rounded-full object-cover shadow-xl"
+                                width="400" height="400"
+                                className="w-11/12 pb-6"
                             />
-                            <div className="text-start px-4 flex flex-col justify-center">
-                                <div className="text-white text-2xl mb-1">
-                                    {tIndex("name")}
-                                </div>
-                                <div className="text-white">
-                                    {tIndex("nameDesc")}
-                                </div>
-                            </div>
                         </div>
                         <div className="border-b border-white my-5" />
                         <div>
