@@ -70,9 +70,8 @@ export default function Navbar({ locale }) {
                 "trasnsition-all duration-300"
 			}
         md:justify-start`}>
-             <Image 
+             <img 
                     src="/images/LogoWhite.png"
-                    height="400"
                     width="400"
                     alt="Logo"
                     className="m-4 hidden lg:block"

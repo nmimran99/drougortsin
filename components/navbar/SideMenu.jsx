@@ -41,10 +41,10 @@ export default function SideMenu({ links }) {
                 <SheetHeader>
                     <SheetDescription className="py-12">
                         <div className="flex justify-start items-center w-full">
-                            <Image
+                            <img
                                 src="/images/LogoWhite.png"
                                 alt="dr.ougortsin"
-                                width="400" height="400"
+                                width="400"
                                 className="w-11/12 pb-6"
                             />
                         </div>
