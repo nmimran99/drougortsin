@@ -4,9 +4,6 @@ import DetailsCard from "./DetailsCard";
 import Link from "next/link";
 
 const mediaLinks = [{
-    name: "infomed",
-    link: "https://www.infomed.co.il/experts/136211/"
-}, {
     name: "hospitalWebsite",
     link: "https://www.sheba.co.il/%D7%95%D7%9C%D7%93%D7%99%D7%A1%D7%9C%D7%91-%D7%90%D7%95%D7%92%D7%95%D7%A8%D7%A6%D7%99%D7%9F"
 }, {
@@ -31,8 +28,8 @@ export default function DescriptionCard() {
                     {t("shortAbout.second")}
                 </div>
             </div>
-            <div className="flex flex-col items-center 
-                md:flex-row md:justify-start md:w-11/12 md:flex-wrap
+            <div className="flex flex-col items-center w-11/12 
+                md:flex-row md:justify-start md:flex-wrap xl:w-3/4
             ">
                 {
                     mediaLinks.map((m,i) => 

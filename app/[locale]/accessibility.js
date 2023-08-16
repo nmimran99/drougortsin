@@ -74,7 +74,7 @@ export default function Accessibilty() {
     setOpen(false);
   }
 
-  return <div className="fixed top-24 left-0 z-50 flex items-start">
+  return <div className="fixed top-48 left-0 z-50 flex items-start">
       <button onClick={() => setOpen(true)}>
             <Image 
                 src="/icons/Accessibility.svg"

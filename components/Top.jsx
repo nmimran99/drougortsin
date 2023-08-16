@@ -6,8 +6,7 @@ export default function Top() {
     const t = useTranslations('Index');
 
     return (
-        <div className="text-white text-center flex flex-col items-center p-2 bg-primary w-screen h-screen
-        md:h-[700px]
+        <div className="text-white text-center flex flex-col items-center justify-center p-2 bg-primary w-screen h-screen
         ">
             <div
             className="flex items-end justify-center w-full"
@@ -21,7 +20,7 @@ export default function Top() {
                         src="/images/vlad_surgeon3.jpg" 
                         alt="dr.ougortsin" 
                         width="1200" height="1200" 
-                        className="hidden w-60 rounded-full my-8 border-4 border-transparent ring ring-2 ring-gray-300 mx-4 lg:block" 
+                        className="hidden w-60 rounded-full mb-8 border-4 border-transparent ring ring-2 ring-gray-300 mx-4 lg:block" 
                     />
                 </motion.div>
                 <motion.div
@@ -33,7 +32,7 @@ export default function Top() {
                         src="/images/vlad_face.jpg" 
                         alt="dr.ougortsin" 
                         width="1200" height="1200" 
-                        className="w-80 rounded-full my-8 border-4 border-transparent ring ring-2 ring-gray-300" 
+                        className="w-60 rounded-full my-8 border-4 border-transparent ring ring-2 ring-gray-300 lg:w-80" 
                     />
                 </motion.div>
                 <motion.div

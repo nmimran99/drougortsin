@@ -23,14 +23,14 @@ export default function HorizontalMenu({ locale, links }) {
     return (
         <NavigationMenu
             dir={locale === "he" ? "rtl" : "ltr"}
-            className="hidden md:flex items-center justify-center h-16 w-full"
+            className="hidden lg:flex items-center justify-center w-full py-4 px-8"
         >
             <NavigationMenuList>
                 {
                     links.map((l, i) => {
                         if (l.subunits) {
                             return <NavigationMenuItem key={i}>
-                                <NavigationMenuTrigger className="text-lg focus:text-white focus:bg-gray-200 focus:bg-opacity-30 hover:text-white hover:bg-gray-200 hover:bg-opacity-30 transition-none bg-transparent">{t("surgeries")}</NavigationMenuTrigger>
+                                <NavigationMenuTrigger className="text-xl font-normal focus:text-white focus:bg-gray-200 focus:bg-opacity-30 hover:text-white hover:bg-gray-200 hover:bg-opacity-30 transition-none bg-transparent">{t("surgeries")}</NavigationMenuTrigger>
                                 <NavigationMenuContent className="text-secondary bg-accent">
                                     <ul role="list" className="grid gap-3 grid-cols-2 px-2 py-2 w-[600px]">
                                         {l.subunits.map((s, i) =>
@@ -46,9 +46,9 @@ export default function HorizontalMenu({ locale, links }) {
                                 </NavigationMenuContent>
                             </NavigationMenuItem>
                         }
-                        return <NavigationMenuItem className="text-lg px-4 hover:bg-gray-200 hover:bg-opacity-30 rounded-lg py-2" key={i}>
+                        return <NavigationMenuItem className="text-xl px-8 hover:bg-gray-200 hover:bg-opacity-30 rounded-lg py-2" key={i}>
                             <Link href={l.href} legacyBehavior passHref>
-                                <NavigationMenuLink className=" font-semibold">
+                                <NavigationMenuLink className="font-normal">
                                     {t(l.name)}
                                 </NavigationMenuLink>
                             </Link>

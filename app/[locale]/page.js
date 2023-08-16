@@ -11,7 +11,7 @@ import Top from "@/components/Top";
 export default function Index() {
   const t = useTranslations('Index');
 
-  return <div className="w-full mt-16" >
+  return <div className="w-full" >
     <div className="flex flex-col items-center justify-center w-full xl:w-3/5 xl:mx-auto">
         <Top />
         <div className="mx-auto w-24 border-b border-black my-8"></div>

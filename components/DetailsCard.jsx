@@ -12,7 +12,7 @@ export default function DetailsCard({ className}) {
             className
             )}>
                 <Image
-                    src="/images/DAD1.webp"
+                    src="/images/DAD2.jpeg"
                     alt="dr.ougortsin"
                     width="200" height="200"
                     className="w-[80px] h-[80px] rounded-full object-cover shadow-xl

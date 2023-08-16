@@ -63,14 +63,21 @@ export default function Navbar({ locale }) {
     }]
 
     return (<>
-        <div className={`w-screen fixed top-0 z-50 bg-gray-800 text-white font-Assistant flex items-center 
+        <div className={`w-screen h-16 fixed top-0 z-40 bg-gray-800 text-white font-Assistant flex items-end lg:h-max
             ${
 				!scrollIsZero ?
 				"trasnsition-all duration-300 shadow-xl":
                 "trasnsition-all duration-300"
 			}
-        md:justify-center h-16`}>
-            <div className="w-full h-full flex justify-between items-center md:hidden">
+        md:justify-start`}>
+             <Image 
+                    src="/images/LogoWhite.png"
+                    height="400"
+                    width="400"
+                    alt="Logo"
+                    className="m-4 hidden lg:block"
+                />
+            <div className="w-full h-full flex justify-between items-center lg:hidden">
                 <div>
                     <SideMenu links={links} />
                 </div>
