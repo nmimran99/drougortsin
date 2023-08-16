@@ -63,7 +63,7 @@ export default function Navbar({ locale }) {
     }]
 
     return (<>
-        <div className={`w-screen h-16 fixed top-0 z-40 bg-gray-800 text-white font-Assistant flex items-end lg:h-max
+        <div className={`w-screen h-16 fixed top-0 z-40 bg-gray-800 text-white font-Assistant flex items-end lg:h-[128px]
             ${
 				!scrollIsZero ?
 				"trasnsition-all duration-300 shadow-xl":
