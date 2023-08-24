@@ -2,8 +2,8 @@
 
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
-import { useCallback, useEffect, useState } from 'react';
-import SideMenu from '@/components/navbar/SideMenu';
+import { useCallback, useEffect, useState, useMemo } from 'react';
+import SideMenu from './SideMenu';
 import HorizontalMenu from './HorizonalMenu';
 
 export default function Navbar({ locale }) {
@@ -24,10 +24,10 @@ export default function Navbar({ locale }) {
 		});
 	});
 
-    const surgeries = [{
+    const surgeries = useMemo(() => [{
         name: "surgeriesDropdown.tibia",
         subname: "surgeriesDropdown.tibiaSub",
-        href: "/surgeries/tb"
+        href: "/surgeries/tibia"
     }, {
         name: "surgeriesDropdown.aroundKneeAnkle",
         href: "/surgeries/aka"
@@ -43,9 +43,9 @@ export default function Navbar({ locale }) {
     }, {
         name: "surgeriesDropdown.lateComplications",
         href: "/surgeries/lc"
-    }];
+    }], []);
 
-    const links = [{
+    const links = useMemo(() => [{
         name: "home",
         href: "/"
     }, {
@@ -60,7 +60,7 @@ export default function Navbar({ locale }) {
     }, {
         name: "contact",
         href: "/contact"
-    }]
+    }], []);
 
     return (<>
         <div className={`w-screen h-16 fixed top-0 z-40 bg-gray-800 text-white font-Assistant flex items-end lg:h-[128px]
@@ -82,7 +82,7 @@ export default function Navbar({ locale }) {
                 </div>
                 <button className="flex items-center align-center py-2 pl-4 ml-4 bg-green-500 rounded-full h-9 border border-2 border-white">
                     <Image
-                        src={"icons/PhoneWhite.svg"}
+                        src={"/icons/PhoneWhite.svg"}
                         width="22"
                         height="22"
                         alt="Phone Icon"

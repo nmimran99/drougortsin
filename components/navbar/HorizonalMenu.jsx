@@ -4,18 +4,13 @@ import { useTranslations } from 'next-intl';
 import {
     NavigationMenu,
     NavigationMenuContent,
-    NavigationMenuIndicator,
     NavigationMenuItem,
     NavigationMenuLink,
     NavigationMenuList,
     NavigationMenuTrigger,
-    NavigationMenuViewport,
-    navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
 import Link from 'next/link';
-import Image from 'next/image';
-import { useState } from 'react';
-import SideMenu from '@/components/navbar/SideMenu';
+
 
 export default function HorizontalMenu({ locale, links }) {
     const t = useTranslations('Navbar');
@@ -36,9 +31,11 @@ export default function HorizontalMenu({ locale, links }) {
                                         {l.subunits.map((s, i) =>
                                             <li key={i} role="listitem" className="row-span-3 font-medium py-4 hover:bg-primary hover:text-white px-2 rounded-md w-full">
                                                 <NavigationMenuItem asChild className="w-full">
-                                                    <Link href={s.href} legacyBehavior passHref>
-                                                        {t(s.name)}
-                                                    </Link>
+                                                    <NavigationMenuLink>
+                                                        <Link href={s.href} legacyBehavior passHref>
+                                                            {t(s.name)}
+                                                        </Link>
+                                                    </NavigationMenuLink>
                                                 </NavigationMenuItem>
                                             </li>
                                         )}

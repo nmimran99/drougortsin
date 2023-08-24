@@ -8,3 +8,15 @@
         src: url("/fonts/Assistant/Assistant-Regular.ttf") format("truetype");
     }
 }
+
+.underline {
+    text-decoration: underline;
+}
+
+.blackAndWhite {
+    filter: grayscale(100%);
+}
+
+.increaseCursor {
+    cursor: url(../public/icons/mousePointerLarge.svg), auto;
+}

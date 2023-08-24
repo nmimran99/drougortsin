@@ -1,6 +1,4 @@
 import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
 import {
     Sheet,
     SheetClose,
@@ -8,19 +6,16 @@ import {
     SheetDescription,
     SheetFooter,
     SheetHeader,
-    SheetTitle,
     SheetTrigger,
     SheetOverlay
 } from "@/components/ui/sheet"
 import Image from "next/image"
-import DetailsCard from "../DetailsCard"
 import { useTranslations } from "next-intl"
 import Link from "next/link"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "../ui/accordion"
 import CommunicationDetails from "../CommunicationDetails"
 
 export default function SideMenu({ links }) {
-    const tIndex = useTranslations('Index');
     const tNavbar = useTranslations('Navbar');
 
     return (
@@ -29,7 +24,7 @@ export default function SideMenu({ links }) {
             <SheetTrigger asChild>
                 <Button>
                     <Image
-                        src={"icons/Burger.svg"}
+                        src={"/icons/Burger.svg"}
                         width="40"
                         height="40"
                         alt="Menu Icon"
@@ -64,9 +59,11 @@ export default function SideMenu({ links }) {
                                                                     {l.subunits.map((sb, i) => {
                                                                         return (
                                                                             <li className="text-gray-200 text-lg pr-4 py-1 font-normal" key={i}>
-                                                                                <Link href={sb.href}>
-                                                                                    {tNavbar(sb.name)}
-                                                                                </Link>
+                                                                                <SheetClose asChild>
+                                                                                    <Link href={sb.href}>
+                                                                                        {tNavbar(sb.name)}
+                                                                                    </Link>
+                                                                                </SheetClose>
                                                                             </li>
                                                                         )
                                                                     })}
@@ -80,9 +77,11 @@ export default function SideMenu({ links }) {
                                         }
                                         return (
                                             <li className="text-gray-200 text-xl py-2 font-normal" key={i}>
-                                                <Link href={l.href}>
-                                                    {tNavbar(l.name)}
-                                                </Link>
+                                                <SheetClose asChild>
+                                                    <Link href={l.href}>
+                                                        {tNavbar(l.name)}
+                                                    </Link>
+                                                </SheetClose>
                                             </li>
                                         )
                                     })
