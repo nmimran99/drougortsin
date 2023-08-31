@@ -1,7 +1,6 @@
-'use client'
+"use client"
 
 import DescriptionCard from '@/components/DescriptionCard';
-import Media from '@/components/Media';
 import MediaAppearance from '@/components/MediaAppearance';
 import Specializations from '@/components/Specializations';
 import {useTranslations} from 'next-intl';

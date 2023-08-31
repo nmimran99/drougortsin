@@ -1,4 +1,4 @@
-'use client'
+"use client"
 
 import PageContainer from "@/components/PageContainer";
 import SurgeryImages from "../../../../components/SurgeryImages";
