@@ -8,7 +8,7 @@ export default function CommunicationDetails() {
     return (
         <>
             <div className="w-11/12">
-                    <Link href="https://goo.gl/maps/4AecA7A1KKnpBXDp9" passHref legacyBehavior>
+                    <Link href="https://maps.app.goo.gl/BZYNzdakLx7gipbM6?g_st=iw" passHref legacyBehavior>
                         <a target="_blank" rel="noopener noreferrer">
                             <div 
                                 className="flex text-white text-lg py-2 px-4"
@@ -39,7 +39,7 @@ export default function CommunicationDetails() {
                             className="w-7 h-7"
                         />
                         <div className="px-2 leading-6">
-                            dr.ougortsin@gmail.com
+                            dr.vladortho@gmail.com
                         </div>
                     </div>
                 </div>

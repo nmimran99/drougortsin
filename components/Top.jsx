@@ -65,7 +65,7 @@ export default function Top() {
         <a
           target="_blank"
           rel="noopener noreferrer"
-          href="https://api.whatsapp.com/send?phone=972526267419"
+          href="https://api.whatsapp.com/send?phone=972527772203"
           className="flex items-center align-center py-2 pl-4 ml-4 bg-green-500 rounded-full h-12 border border-2 border-white my-8 text-lg"
         >
           <Image

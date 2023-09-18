@@ -46,9 +46,9 @@ export default function Recommendations() {
             <div className="p-2">{t("byEmail")}</div>
             <button
               className="border border-gray-300 rounded-xl flex flex-between bg-white"
-              onClick={copyToClipboard("email", "dr.ougortsin@gmail.com")}
+              onClick={copyToClipboard("email", "dr.vladortho@gmail.com")}
             >
-              <div className="px-8 my-auto">dr.ougortsin@gmail.com</div>
+              <div className="px-8 my-auto">dr.vladortho@gmail.com</div>
               <div className="rounded-l-xl border-r border-gray-300 bg-black/80 p-2 flex">
                 <img
                   src="/icons/Copy.svg"
