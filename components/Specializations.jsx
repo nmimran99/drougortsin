@@ -50,7 +50,6 @@ export default function Specializations() {
 
   useEffect(() => {
     if (isInView) {
-      console.log("In View");
       animate(
         "li",
         { opacity: 1, translateY: "10px" },

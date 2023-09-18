@@ -14,6 +14,7 @@ import { useTranslations } from "next-intl"
 import Link from "next/link"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "../ui/accordion"
 import CommunicationDetails from "../CommunicationDetails"
+import { AiOutlineClose } from "react-icons/ai"
 
 export default function SideMenu({ links }) {
     const tNavbar = useTranslations('Navbar');
@@ -22,18 +23,23 @@ export default function SideMenu({ links }) {
         <Sheet>
             <SheetOverlay className="backdrop-blur-xl" />
             <SheetTrigger asChild>
-                <Button>
+                <Button className="bg-transparent w-auto h-auto">
                     <Image
                         src={"/icons/Burger.svg"}
                         width="40"
                         height="40"
                         alt="Menu Icon"
-                        className="mx-2 my-auto "
+                        className="mx-2 my-auto"
                     />
                 </Button>
             </SheetTrigger>
-            <SheetContent className="bg-black bg-opacity-50 backdrop-blur-xl w-full border-none overflow-auto">
+            <SheetContent className="bg-gray-900 backdrop-blur-md w-full border-none overflow-auto">
                 <SheetHeader>
+                    <SheetClose>
+                        <div className="text-white z-10 bg-gray-900 border border-gray-200 rounded-full h-8 w-8 flex items-center justify-center" >
+                            <AiOutlineClose className="h-6 w-6"/>
+                        </div>    
+                    </SheetClose>
                     <SheetDescription className="py-12">
                         <div className="flex justify-start items-center w-full">
                             <img
@@ -92,9 +98,6 @@ export default function SideMenu({ links }) {
                 </SheetHeader>
                 <SheetFooter className="relative w-full bottom-0 pt-5 border-t border-white my-5">
                     <CommunicationDetails />
-                    <SheetClose asChild className="text-white">
-
-                    </SheetClose>
                 </SheetFooter>
             </SheetContent>
         </Sheet>

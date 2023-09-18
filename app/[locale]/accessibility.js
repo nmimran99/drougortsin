@@ -39,15 +39,6 @@ export default function Accessibilty() {
     })
   }, [])
 
-  const detectKeyDown = () => {
-    if(keysPressed.key1 == "Control") {
-      console.log("detected")
-      if(keysPressed.key2 == "=") {
-        console.log("this");
-      } 
-    }
-  }
-
   const increaseFont = () => {
     if (state.fontSize == 2) {
       document.querySelector("html").style.fontSize = `100%`;
