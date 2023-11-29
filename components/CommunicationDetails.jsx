@@ -59,6 +59,14 @@ export default function CommunicationDetails() {
                         </div>
                     </div>
                 </div>
+                <div className="w-11/12">
+                    <div 
+                        className="flex text-white text-lg py-2 px-4"
+                    >
+                         <Link className="text-gray-300 text-sm w-[340px]" href="/negishut">הצהרת נגישות</Link>
+                    </div>
+                </div>
+
         </>
     )
 }
